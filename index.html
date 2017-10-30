@@ -14,26 +14,27 @@
       background-color: #134699;
     }
     .gamma{
-      	background:#134699;
-        text-align:center;
-        width: 80px;
-    	height: 80px;
-    	transition: width 2s, height 2s, transform 2s;
-    }
-    .gamma:hover {
-     	width: 300px;
-     	height: 300px;
-     	transform: rotate(360deg);
+     	width: 100px;
+    	height: 100px;
+    	position: relative;
+    	animation-name: gamma;
+        animation-duration: 4s;
 }
-    
+
+    @keyframes gamma{
+    0%   {left:0px; top:0px;}
+    25%  {left:500px; top:0px;}
+    50%  {left:500px; top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
+}
+   
   </style>
 </HEAD>
  <BODY class="rojo">
  <div class="gamma"><CENTER><h1 style="color: #9da7b7; font-family:times new roman; font-size:80;">GAMMA</h1></CENTER>
  </div>
-
-
-  
+ 
  
  
  <H2> <CENTER><h1 style="color: #9da7b7"><strike>Compañia de Ascensores</strike></h1></CENTER>
