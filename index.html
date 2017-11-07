@@ -13,21 +13,60 @@
     .rojo{
       background-color: #134699;
     }
-    .gamma{
     	
-     	width: 100px;
-    	height: 100px;
-    	position: relative;
-    	animation-name: gamma;
-        animation-duration: 4s;
-      animation-iteration-count: 1;
+  @font-face {
+  font-family: 'Monoton';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Monoton'), local('Monoton-Regular'), url(http://themes.googleusercontent.com/static/fonts/monoton/v4/AKI-lyzyNHXByGHeOcds_w.woff) format('woff');
 }
-    @keyframes gamma{
-    0%   {left:0px; top:0px;}
-    25%  {left:600px; top:0px;}
-    50%  {left:-600px; top:0px;}
-    75%  {left:0px; top:0px;}
-    100% {left:0px; top:0px;}
+
+
+body{
+  background-color: #222222;
+}
+/*neon effect*/
+p{
+  text-align:center;
+  font-size:7em;
+  margin:20px 0 20px 0;
+}
+
+a{
+  text-decoration:none;
+  transition: all 0.5s;
+}
+
+p:nth-child(1) a{
+  color:#228DFF;
+  font-family:Monoton;
+}
+p:nth-child(1) a:hover{
+    animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #228DFF,
+               0 0 70px  #228DFF,
+               0 0 80px  #228DFF,
+               0 0 100px #228DFF,
+               0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #228DFF,
+               0 0 35px #228DFF,
+               0 0 40px #228DFF,
+               0 0 50px #228DFF,
+               0 0 75px #228DFF;
+  }
 }
 
 .button {
@@ -44,14 +83,12 @@
   cursor: pointer;
   margin: 5px;
 }
-
 .button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
-
 .button span:after {
   content: '\00bb';
   position: absolute;
@@ -60,29 +97,28 @@
   right: -20px;
   transition: 0.5s;
 }
-
 .button:hover span {
   padding-right: 25px;
 }
-
 .button:hover span:after {
   opacity: 1;
   right: 0;
 }
-
 .button:hover {
     background-color: #0B0B3B; 
     color: white;
 }
-
  </style>
    
 </HEAD>
  <BODY class="rojo">
- <CENTER>
- <div class="gamma"><h1 style="color: #9da7b7; font-family:times new roman; font-size:80;">GAMMA</h1>
-  </div>
- </CENTER>
+ <div class="container">
+
+   <p><a href="">
+    GAMMA
+  </a></p>
+  
+</div>
 
   <CENTER>
 <a href="http://www.ascensoresgamma.com" target="_blank"><button class="button"><span>Empresa</span></button></a> 
